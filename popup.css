@@ -1,0 +1,235 @@
+/* Traktrain Downloader Popup Styles - Dark Geist Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    width: 320px;
+    min-height: 400px;
+    background: #000000;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.container {
+    background: #111111;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.05);
+    border: 1px solid #222222;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Status messages */
+.status {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid #333333;
+}
+
+.status.success {
+    background-color: #0d2818;
+    color: #4ade80;
+    border: 1px solid #166534;
+}
+
+.status.error {
+    background-color: #2d1b1f;
+    color: #f87171;
+    border: 1px solid #7f1d1d;
+}
+
+.status.info {
+    background-color: #1e293b;
+    color: #60a5fa;
+    border: 1px solid #1e40af;
+}
+
+.status.hidden {
+    display: none;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Geist', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    /* Base styles - will be overridden by specific button classes */
+}
+
+.btn:hover {
+    background: #2a2a2a;
+    border-color: #444444;
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+    background: #0a0a0a;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    background: #1a1a1a;
+}
+
+.btn-primary {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 1px solid #ffffff !important;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #f0f0f0 !important;
+    border-color: #f0f0f0 !important;
+    color: #000000 !important;
+}
+
+.btn-secondary {
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #555555 !important;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #2a2a2a !important;
+    border-color: #666666 !important;
+    color: #ffffff !important;
+}
+
+/* Progress container */
+.progress-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.progress-container.hidden {
+    display: none;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+    border: 1px solid #333333;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #ffffff;
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #cccccc;
+    font-family: 'Geist', sans-serif;
+    margin: 0;
+}
+
+/* Options */
+.options {
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Geist', sans-serif;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+    accent-color: #ffffff;
+}
+
+
+/* Instructions */
+.instructions {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 15px;
+    border-left: 4px solid #ffffff;
+    border: 1px solid #333333;
+}
+
+.instructions p {
+    font-weight: 600;
+    font-family: 'Geist', sans-serif;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.instructions ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.instructions li {
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-family: 'Geist', sans-serif;
+    line-height: 1.4;
+    color: #cccccc;
+}
+
+.instructions strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 350px) {
+    body {
+        width: 300px;
+        padding: 15px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+

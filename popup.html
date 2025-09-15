@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traktrain Downloader</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Traktrain Downloader</h1>
+
+        <!-- Status message area -->
+        <div id="status" class="status hidden">
+            <p id="status-text"></p>
+        </div>
+
+        <!-- Main buttons -->
+        <div class="button-group">
+            <button id="download-single" class="btn btn-primary">
+                Download Single Beat
+            </button>
+            <button id="download-profile" class="btn btn-secondary">
+                Download Full Profile
+            </button>
+        </div>
+
+        <!-- Progress indicator -->
+        <div id="progress-container" class="progress-container hidden">
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <p id="progress-text">Preparing download...</p>
+        </div>
+
+        <!-- Additional options -->
+        <div class="options">
+            <label class="checkbox-label">
+                <input type="checkbox" id="create-artist-folder" checked>
+                Create artist folder
+            </label>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <p><strong>Usage:</strong></p>
+            <ul>
+                <li><strong>Single Beat:</strong> Click when on a beat page to download that specific track</li>
+                <li><strong>Full Profile:</strong> Click when on an artist profile to download all their beats</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
+

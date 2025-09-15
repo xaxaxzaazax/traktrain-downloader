@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Traktrain Downloader",
+  "version": "1.0.0",
+  "description": "Download beats and full profiles from Traktrain",
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://traktrain.com/*",
+    "https://traktra.in/*",
+    "https://*.traktrain.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://traktrain.com/*",
+        "https://traktra.in/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Download from Traktrain",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
+

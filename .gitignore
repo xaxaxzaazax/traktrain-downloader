@@ -1,0 +1,14 @@
+# Node
+node_modules/
+*.log
+
+# Chrome Extension
+*.crx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+.env
+*.bak
